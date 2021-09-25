@@ -1,11 +1,12 @@
 #!/bin/bash
 #
-# Data-preparation script for paritioning Speaker-Age
+# Data-preparation script for paritioning FishBoardMix for Speaker-Age.
+#
 # Requirements:
 #     Your [aggregated] corpus in some folder with the files: spk2gender, spk2yage, utt2yage, utt2spk, wav.scp.
 #
 # Usage:
-#  ./prep.sh <ORIG_CORPUS_DIR>
+#  ./build.sh <SOURCE_CORPUS_DIR>
 #
 # Interactions LLC. 2021
 # A.Moreno
@@ -14,7 +15,7 @@ set -e
 _tmpfiles=" .spklist$$ eval/.spklist$$ dev/.spklist$$ train/.spklist$$ .tot-spklist$$ "
 trap 'rm -f $_tmpfiles ; trap - INT; kill -s INT "$$"' INT
 
-[[ "$#" < 1 ]] && (>&2 echo -e "USAGE:\n $0 <ORIG_CORPUS_DIR>\n;;; where ORIG_CORPUS_DIR contains spk2gender, spk2yage, utt2yage, utt2spk, wav.scp." ) && exit 1;
+[[ "$#" < 1 ]] && (>&2 echo -e "USAGE:\n $0 <SOURCE_CORPUS_DIR>\n;;; where SOURCE_CORPUS_DIR contains spk2gender, spk2yage, utt2yage, utt2spk, wav.scp." ) && exit 1;
 
 D=$1
 
@@ -23,7 +24,6 @@ CORPORA="swb mx6 fsh"
 TEST_AGES="18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70"
 
 NR_SPK_PER_YAGE=12
-
 
 (
   for AGE in $TEST_AGES; do
