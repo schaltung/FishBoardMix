@@ -73,11 +73,11 @@ cat ._list.2$$ \
   | awk -F"_" '{print substr($1,0,3)"/fe_03_"$1".sph"}' > $sphfiles
 
 for sph in $(cat $sphfiles); do
-  ls $LDC_DIR/*/*/audio/$sph 
+  ls $LDC_DIR/*/*/audio/$sph
 done > .sph.paths$$
 
 # WAV.SCP
-paste -d ' ' .uttids$$ .sph.paths$$ \
+paste -d ' ' .uttids$$  .sph.paths$$ \
   | sed -e "s/\-\([AB]\)\b/-\1 sph2pipe -p -f wav -c \1/" \
   | sed -e "s/ A\b/ 1/" -e "s/ B\b/ 2/" \
   | awk '{print $0,"|"}' \
