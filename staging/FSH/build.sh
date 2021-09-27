@@ -1,9 +1,9 @@
 #!/bin/bash
 #
-# Data-preparation script for Speaker-Age
+# Data-preparation script for Speaker-Age: FishBoardMix
 # Corpus: Fisher
 # Requirements:
-#     Place LDC200{45}T19 and LDC200{45}S13 under $LDC_DIR
+#     Must place LDC200{45}T19 and LDC200{45}S13 (or a symlink) under $LDC_DIR/
 #
 # Usage:
 #  ./prepFisher.sh <LDC_DIR>
@@ -16,14 +16,13 @@
 #    22320 utt2yage
 #    22320 wav.scp
 #
-# Interactions LLC. 2021
 # A.Moreno
 #
 set -e
 _tmpfiles="._list.1$$ ._list.2$$ .uttids$$ .sph.paths$$ .sphfiles$$"
 trap 'rm -f $_tmpfiles ; trap - INT; kill -s INT "$$"' INT
 
-[[ "$#" < 1 ]] && (>&2 echo -e "USAGE:\n $0 <LDC_DIR>\n;;; where LDC_DIR contains LDC200{45}T19 and LDC200{45}S13." ) && exit 1;
+[[ "$#" != 1 ]] && (>&2 echo -e "USAGE:\n $0 <LDC_DIR>\n;;; where LDC_DIR contains LDC200{45}T19 and LDC200{45}S13." ) && exit 1;
 
 LDC_DIR=$1
 
@@ -48,9 +47,11 @@ cat ._list.1$$ \
 # SPK2YAGE
 cat ._list.2$$ \
   | awk '$2==$5 {print "fsh"$1"-"$2$5, $3}' | sort | uniq > spk2yage
+(>&2 echo "[INFO]     spk2yage    (1/5) [done]" )
 
 cat spk2yage \
   | sed -e "s/-MM\b.*/-MM m/" -e "s/-FF\b.*/-FF f/" > spk2gender
+(>&2 echo "[INFO]     spk2gender  (2/5) [done]" )
 
 cat ._list.2$$ \
   | awk '$2==$5 {print "fsh"$1"-"$2$5"-"$4}' \
@@ -59,11 +60,12 @@ cat ._list.2$$ \
 # UTT2SPK
 paste .uttids$$  .uttids$$ \
   | cut -d'-' -f1-5 > utt2spk
+(>&2 echo "[INFO]     utt2spk     (3/5) [done]" )
 
 # UTT2YAGE
 cat ._list.2$$ \
   | awk '$2==$5 {print "fsh"$1"-"$2$5"-"$4, $3}' | sort > utt2yage
-
+(>&2 echo "[INFO]     utt2yage    (4/5) [done]" )
 
 sphfiles=.sphfiles$$
 cat ._list.2$$ \
@@ -80,6 +82,7 @@ paste -d ' ' .uttids$$ .sph.paths$$ \
   | sed -e "s/ A\b/ 1/" -e "s/ B\b/ 2/" \
   | awk '{print $0,"|"}' \
   | sort > wav.scp
+(>&2 echo "[INFO]     wav.scp     (5/5) [done]" )
 
 rm -f $_tmpfiles
 (>&2
