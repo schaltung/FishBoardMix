@@ -3,7 +3,7 @@
 
 ## Getting Started
 
-#### 1. Staging of the individual corpora.
+#### 1. Staging the individual corpora.
 Go to `staging/` and build each sub-corpus individually by running its own `build.sh` script.
 
 Each `build.sh` script requires one argument with the path to a folder containing the original LDC corpora needed.
