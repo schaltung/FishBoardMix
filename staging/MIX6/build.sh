@@ -22,7 +22,7 @@ set -e
 _tmpfiles=".spk.dob.utt.date$$ .y_dob2date$$ .utt2date.1$$ .spk2yob$$ .spk2dob$$ .utt2spk.1$$ .paths$$ "
 trap 'rm -f $_tmpfiles ; trap - INT; kill -s INT "$$"' INT
 
-[[ "$#" < 1 ]] && (>&2 echo -e "USAGE:\n $0 <LDC_DIR>\n;;; where LDC_DIR contains LDC2013S03." ) && exit 1;
+[[ "$#" != 1 ]] && (>&2 echo -e "USAGE:\n $0 <LDC_DIR>\n;;; where LDC_DIR contains LDC2013S03." ) && exit 1;
 
 LDC_DIR=/n/LDC/LDC2018/mx6_speech_LDC2013S03
 
