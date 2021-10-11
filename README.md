@@ -89,24 +89,39 @@ For the v18to70 version, run `v18to70/build.sh`. Modify this script to create an
 
   14195 train/spk2gender
   14195 train/spk2yage
-  53834 train/utt2spk
-  53834 train/utt2yage
-  53834 train/wav.scp
- 189892 total
+  54022 train/utt2spk
+  54022 train/utt2yage
+  54022 train/wav.scp
+ 190456 total
+23e3d406c1d812161dc8a2e33e9ce482  train/spk2gender
+30b5abaad6df709a28233a2112ea6cf1  train/spk2yage
+0a96921b2fab22c5aaed7cb61e757c13  train/utt2spk
+067cb49845652549703dbfc3bd430bcd  train/utt2yage
+de85481070df08a5b385aab1a979554a  train/wav.scp
 
    318 eval/spk2gender
    318 eval/spk2yage
-  2712 eval/utt2spk
-  2712 eval/utt2yage
-  2712 eval/wav.scp
-  8772 total
+  2273 eval/utt2spk
+  2273 eval/utt2yage
+  2273 eval/wav.scp
+  7455 total
+ae7a14a64e75a4c96cc21dceb10deb17  eval/spk2gender
+66d54268fd4f0b884a706d079c077a96  eval/spk2yage
+0ed49cd8a4c9a17797dd22ad8a57bab6  eval/utt2spk
+ba1bbba6d6f1aa47c319f7874ea62519  eval/utt2yage
+410e9f2ba3afe7f7dfb0e3b137aca58a  eval/wav.scp
 
    313 dev/spk2gender
    313 dev/spk2yage
-  2562 dev/utt2spk
-  2562 dev/utt2yage
-  2562 dev/wav.scp
-  8312 total
+  2813 dev/utt2spk
+  2813 dev/utt2yage
+  2813 dev/wav.scp
+  9065 total
+262a7c38209361613281caad9efbae30  dev/spk2gender
+56580ce8d2efaf5ca865377cb3eb1e83  dev/spk2yage
+969f91c82ad8a075680af6231f487dd6  dev/utt2spk
+86aff46edfeeb9d6b41b92115abeac1f  dev/utt2yage
+db8182b9f10090f9f7c44ac54f9eeadd  dev/wav.scp
 
 done!
 %
