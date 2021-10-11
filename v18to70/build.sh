@@ -68,6 +68,7 @@ rm -f $_tmpfiles
 echo
 for x in train eval dev; do
   wc -l $x/*
+  md5sum $x/*
   echo
 done
 echo "done!"
