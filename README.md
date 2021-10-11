@@ -84,7 +84,7 @@ done!.
 For the v18to70 version, run `v18to70/build.sh`. Modify this script to create any other version.
 
 ```
-% cd v18to70
+% cd v18to70/
 % ./build.sh ../staging/
 
   14195 train/spk2gender
