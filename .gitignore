@@ -6,6 +6,7 @@ spk2gender
 spk2yage
 utt2spk
 utt2yage
+wav.scp
 
 # temporary files
 .*
