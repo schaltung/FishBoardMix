@@ -27,7 +27,7 @@ This project contains the scripts necessary to assemble the FishBoardMix corpus 
 ### Age-VOX-Celeb
 With nearly 5k speakers and 168k clips from 22k videos, Age-VOX-Celeb is the largest _freely available_ corpus labeled for age estimation. The age labels were obtained from multiple data sources.
 * GITHUB Repository: [AgeVoxCeleb](https://github.com/nttcslab-sp/agevoxceleb)
-* Article: [Age-VOX-Celeb: Multi-Modal Corpus for Facial and Speech Estimation. Tawara et al.](https://arxiv.org/abs/2109.13510)
+* Article: [Age-VOX-Celeb: Multi-Modal Corpus for Facial and Speech Estimation. Tawara et al.](https://ieeexplore.ieee.org/abstract/document/9414272)
 
 
 ### VoxCeleb Enrichment for Age and Gender Recognition
@@ -38,7 +38,7 @@ This is a closely related corpus independently done by automating the annotation
 
 ## SRE08/10
 This corpus has been used in recent years, however, its small number of speakers (1658) and unbalanced distribution across age groups renders it for limited use.
-Refer to Table 1 in [this article](https://arxiv.org/abs/2109.13510) for an enlightening review of corpora available for research on age estimation.
+Refer to Table 1 in [this article](https://ieeexplore.ieee.org/abstract/document/9414272) for an enlightening review of corpora available for research on age estimation.
 
 
 [↑top](#fishboardmix-corpus-for-speaker-age-estimation)
