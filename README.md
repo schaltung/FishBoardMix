@@ -1,4 +1,13 @@
-# FishBoardMix
+# FishBoardMix corpus for Speaker Age Estimation
+
+##### Table of Contents  
+* [About](#about)  
+* [Related Corpora](#related-corpora-for-speaker-age-estimation)
+  * [VoxCeleb](#voxceleb)
+  * [SRE08/10](#sre0810)
+* [Getting Started with FishBoardMix](#getting-started)  
+
+
 
 ## About
 The FishBoardMix is a corpus designed to study Speaker-Age estimation technology.
@@ -6,6 +15,33 @@ It combines audio and meta-data information from 3 popular LDC corpora: Fisher, 
 
 While data preparation is a time consuming and often tedious task, it is essential for the reproducibility of experimental research.
 This project contains the scripts necessary to assemble the FishBoardMix corpus from original copies of LDC corpora, publicly available from [LDC portal](https://www.ldc.upenn.edu/).
+
+
+[↑top](#fishboardmix-corpus-for-speaker-age-estimation)
+
+
+# Related corpora for Speaker Age Estimation
+
+## VoxCeleb
+
+### Age-VOX-Celeb
+With nearly 5k speakers and 168k clips from 22k videos, Age-VOX-Celeb is the largest _freely available_ corpus labeled for age estimation. The age labels were obtained from multiple data sources.
+* GITHUB Repository: [AgeVoxCeleb](https://github.com/nttcslab-sp/agevoxceleb)
+* Article: [Age-VOX-Celeb: Multi-Modal Corpus for Facial and Speech Estimation. Tawara et al.](https://arxiv.org/abs/2109.13510)
+
+
+### VoxCeleb Enrichment for Age and Gender Recognition
+This is a closely related corpus independently done by automating the annotation of age labels with a more liberal method.
+* GITHUB Repository: [VoxCelebEnrichment](https://github.com/hechmik/voxceleb_enrichment_age_gender)
+* Article: [VoxCeleb Enrichment for Age and Gender Recognition. Hechmi, et al.](https://arxiv.org/abs/2109.13510)
+
+
+## SRE08/10
+This corpus has been used in recent years, however, its small number of speakers (1658) and unbalanced distribution across age groups renders it for limited use.
+Refer to Table 1 in [this article](https://arxiv.org/abs/2109.13510) for an enlightening review of corpora available for research on age estimation.
+
+
+[↑top](#fishboardmix-corpus-for-speaker-age-estimation)
 
 
 ## Getting Started
@@ -27,6 +63,7 @@ Data preparation creates the following 5 files for each of the 3 corpora: FSH, S
 Secondly, the 
 
 
+[↑top](#fishboardmix-corpus-for-speaker-age-estimation)
 
 
 ### Illustrative Example.
@@ -97,6 +134,7 @@ USAGE:
 %
 ```
 
+[↑top](#fishboardmix-corpus-for-speaker-age-estimation)
 
 #### 2. Aggregate to Assemble FishBoardMix.
 
@@ -117,6 +155,7 @@ FSH/wav.scp  MIX6/wav.scp  SWB/wav.scp
   206976 total
 done!.
 ```
+[↑top](#fishboardmix-corpus-for-speaker-age-estimation)
 
 ##### Partition FishBoardMix:
 
@@ -165,3 +204,4 @@ db8182b9f10090f9f7c44ac54f9eeadd  dev/wav.scp
 done!
 %
 ```
+[↑top](#fishboardmix-corpus-for-speaker-age-estimation)
