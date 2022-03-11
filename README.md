@@ -14,7 +14,7 @@
 ## About
 
 The FishBoardMix corpus is designed to explore Speaker-Age estimation technology.
-Motivated by the improvements and lessons learned in [Age-VoxCeleb](#voxceleb), FishBoardMix includes a large number of speakers with a relatively balanced age/gender coverage.
+Motivated by the improvements brought by the team behind the [Age-VoxCeleb](#voxceleb) project, FishBoardMix includes a large number of speakers with a relatively balanced age/gender coverage.
 It combines audio and meta-data from 3 popular LDC corpora: Fisher, Mix6 and Switchboard; where participants have provided their gender and age.
 
 Despite data preparation being a time consuming and tedious task, it is essential for the reproducibility of experimental research.
