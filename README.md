@@ -4,6 +4,7 @@
 * [About](#about)  
 * [Requirements](#requirements)  
 * [Getting Started with FishBoardMix](#getting-started)
+  * [Step by Step Example](#step-by-step-example)
 * [Related Corpora](#related-corpora-for-speaker-age-estimation)
   * [VoxCeleb](#voxceleb)
   * [SRE08/10](#sre0810)
@@ -141,7 +142,8 @@ USAGE:
 
 #### 2. Aggregate.
 
-##### Consolidate files:
+Consolidate files:
+
 ```
 % cd FishBoardMix/staging/
 % ./build.sh
@@ -162,7 +164,7 @@ done!.
 
 
 
-### 3. Partitions.
+#### 3. Partitions.
 
 Since there is no single "correct" way to split the data, FishBoardMix supports multiple versions of the partitioning.
 The default (and currently only) parition is `v18to70-2203`, however, the scripts that generate this parition can be easily modified to create custom ones.
