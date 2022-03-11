@@ -21,7 +21,7 @@ Despite data preparation being a time consuming and tedious task, it is essentia
 This project contains the scripts necessary to assemble the FishBoardMix corpus from original copies of LDC corpora, publicly available from [LDC portal](https://www.ldc.upenn.edu/).
 
 
-\  | FSH | SWB | MX6 | Tot
+\  | FSH | SWB | MIX6 | Tot
 --- | --- | --- | --- | ---
 \# Speakers (f, m) | 11606 (6712, 4894) | 2631 (1431, 1200) | 589 (300, 289) | 14826 (8443, 6383)
 Recordings | 22320 | 28012 | 8776 | 59108
