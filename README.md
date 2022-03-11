@@ -3,10 +3,10 @@
 ##### Table of Contents  
 * [About](#about)  
 * [Requirements](#requirements)  
+* [Getting Started with FishBoardMix](#getting-started)
 * [Related Corpora](#related-corpora-for-speaker-age-estimation)
   * [VoxCeleb](#voxceleb)
   * [SRE08/10](#sre0810)
-* [Getting Started with FishBoardMix](#getting-started)  
 
 -------
 
