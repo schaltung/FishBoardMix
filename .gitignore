@@ -10,3 +10,4 @@ wav.scp
 
 # temporary files
 .*
+!*/._random_source
