@@ -36,7 +36,7 @@ These recordings are 249 seconds long on average.
 
 ### Known caveats and work-arounds
 
-Call recordings from the Fisher corpus were initiated by an automated dial-up platform, therefore the identity of speakers picking up these calls may or may not match the subjects who actually registered with LDC. 
+Call recordings from the Fisher corpus were initiated by an automated dial-up platform, therefore the identity of speakers who answered these calls may or may not match the subjects who actually registered with LDC. 
 In order to mitigate this inconsistency, FishBoardMix makes use of the _manual audit files_ included in Fisher to discard any subject with conflicting meta-data.
 
 
@@ -58,12 +58,12 @@ Must download, unpack and place (a symlink to) these folders in one directory.
 ----------
 ## Getting Started
 
-This data preparation task creates several list-files with information relevant to conduct experiments for Speaker-Age estimation.
-This task is split into three steps.
+The goal of this data preparation task is to create 5 list-files with information relevant to conduct experiments for Speaker-Age estimation.
+There are three steps:
 
 1. Process each individual corpus creating 5 list: `spk2gender`, `utt2yage`, `utt2spk`, `spk2yage`, `wav.scp`.
 2. Aggregate the list files.
-3. Partition into Train, Eval and Dev randomly ensuring speakers .
+3. Partition into Train, Eval and Dev randomly ensuring speakers do not overlap across set.
 
 
 
@@ -142,7 +142,7 @@ USAGE:
 
 #### 2. Aggregate.
 
-Consolidate files:
+Consolidate the list files:
 
 ```
 % cd FishBoardMix/staging/
@@ -164,10 +164,10 @@ done!.
 
 
 
-#### 3. Partitions.
+#### 3. Partition.
 
-Since there is no single "correct" way to split the data, FishBoardMix supports multiple versions of the partitioning.
-The default (and currently only) parition is `v18to70-2203`, however, the scripts that generate this parition can be easily modified to create custom ones.
+Since there is no single "correct" way to split the data, FishBoardMix supports multiple versions of the partitioning scheme.
+The default (and currently only) parition is `v18to70-2203`, however, the scripts that generate this parition can be easily adjusted to create custom ones.
 
 ```
 % cd v18to70-2203/
