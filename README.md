@@ -4,6 +4,7 @@
 * [About](#about)  
 * [Requirements](#requirements)  
 * [Getting Started with FishBoardMix](#getting-started)
+  * [Step by Step Example](#step-by-step-example)
 * [Related Corpora](#related-corpora-for-speaker-age-estimation)
   * [VoxCeleb](#voxceleb)
   * [SRE08/10](#sre0810)
@@ -13,14 +14,14 @@
 ## About
 
 The FishBoardMix corpus is designed to explore Speaker-Age estimation technology.
-Motivated by the improvements and lessons learned in [Age-VoxCeleb](#voxceleb), FishBoardMix includes a large number of speakers with a relatively balanced age/gender coverage.
+Motivated by the improvements brought by the team behind the [Age-VoxCeleb](#voxceleb) project, FishBoardMix includes a large number of speakers with a relatively balanced age/gender coverage.
 It combines audio and meta-data from 3 popular LDC corpora: Fisher, Mix6 and Switchboard; where participants have provided their gender and age.
 
 Despite data preparation being a time consuming and tedious task, it is essential for the reproducibility of experimental research.
 This project contains the scripts necessary to assemble the FishBoardMix corpus from original copies of LDC corpora, publicly available from [LDC portal](https://www.ldc.upenn.edu/).
 
 
-\  | FSH | SWB | MX6 | Tot
+\  | FSH | SWB | MIX6 | Tot
 --- | --- | --- | --- | ---
 \# Speakers (f, m) | 11606 (6712, 4894) | 2631 (1431, 1200) | 589 (300, 289) | 14826 (8443, 6383)
 Recordings | 22320 | 28012 | 8776 | 59108
@@ -35,7 +36,7 @@ These recordings are 249 seconds long on average.
 
 ### Known caveats and work-arounds
 
-Call recordings from the Fisher corpus were initiated by an automated dial-up platform, therefore the identity of speakers picking up these calls may or may not match the subjects who actually registered with LDC. 
+Call recordings from the Fisher corpus were initiated by an automated dial-up platform, therefore the identity of speakers who answered these calls may or may not match the subjects who actually registered with LDC. 
 In order to mitigate this inconsistency, FishBoardMix makes use of the _manual audit files_ included in Fisher to discard any subject with conflicting meta-data.
 
 
@@ -57,12 +58,12 @@ Must download, unpack and place (a symlink to) these folders in one directory.
 ----------
 ## Getting Started
 
-This data preparation task creates several list-files with information relevant to conduct experiments for Speaker-Age estimation.
-This task is split into three steps.
+The goal of this data preparation task is to create 5 list-files with information relevant to conduct experiments for Speaker-Age estimation.
+There are three steps:
 
 1. Process each individual corpus creating 5 list: `spk2gender`, `utt2yage`, `utt2spk`, `spk2yage`, `wav.scp`.
 2. Aggregate the list files.
-3. Partition into Train, Eval and Dev randomly ensuring speakers .
+3. Partition into Train, Eval and Dev randomly ensuring speakers do not overlap across set.
 
 
 
@@ -141,7 +142,8 @@ USAGE:
 
 #### 2. Aggregate.
 
-##### Consolidate files:
+Consolidate the list files:
+
 ```
 % cd FishBoardMix/staging/
 % ./build.sh
@@ -162,10 +164,10 @@ done!.
 
 
 
-### 3. Partitions.
+#### 3. Partition.
 
-Since there is no single "correct" way to split the data, FishBoardMix supports multiple versions of the partitioning.
-The default (and currently only) parition is `v18to70-2203`, however, the scripts that generate this parition can be easily modified to create custom ones.
+Since there is no single "correct" way to split the data, FishBoardMix supports multiple versions of the partitioning scheme.
+The default (and currently only) parition is `v18to70-2203`, however, the scripts that generate this parition can be easily adjusted to create custom ones.
 
 ```
 % cd v18to70-2203/
