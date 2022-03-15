@@ -217,10 +217,7 @@ done!
 
 ##### Number of speakers by age.
 
-![Histogram of nr speakers by age.](.figs/histFishBoardMix.png)
-
-
-![Example2](.figs/histFishBoardMix.png)
+![Histogram of nr speakers by age.](.figs/histFishBoardMix.pdf)
 
 
 [↑top](#fishboardmix-corpus-for-speaker-age-estimation)
