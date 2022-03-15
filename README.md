@@ -215,7 +215,7 @@ done!
 
 ##### Number of speakers by age.
 
-![Histogram of nr speakers by age.](.figs/histFishBoardMix.svg)
+![Histogram of nr speakers by age.](https://raw.githubusercontent.com/schaltung/FishBoardMix/dev/.figs/histFishBoardMix.svg)
 
 
 ```
