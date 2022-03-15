@@ -212,13 +212,15 @@ ee04be5cd9d4cb6144027e1affc6b8e3  dev/wav.scp
 done!
 %
 
+```
+
 
 ##### Number of speakers by age.
 
 ![Histogram of nr speakers by age.](https://raw.githubusercontent.com/schaltung/FishBoardMix/dev/.figs/histFishBoardMix.svg)
 
 
-```
+
 [↑top](#fishboardmix-corpus-for-speaker-age-estimation)
 
 ----------
