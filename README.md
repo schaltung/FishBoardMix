@@ -170,44 +170,44 @@ Since there is no single "correct" way to split the data, FishBoardMix supports 
 The default (and currently only) parition is `v18to70-2203`, however, the scripts that generate this parition can be easily adjusted to create custom ones.
 
 ```
-% cd v18to70-2203/
+% cd FishBoardMix/v18to70-2203/
 % ./build.sh ../staging/
 
-  14195 train/spk2gender
-  14195 train/spk2yage
-  54022 train/utt2spk
-  54022 train/utt2yage
-  54022 train/wav.scp
- 190456 total
-23e3d406c1d812161dc8a2e33e9ce482  train/spk2gender
-30b5abaad6df709a28233a2112ea6cf1  train/spk2yage
-0a96921b2fab22c5aaed7cb61e757c13  train/utt2spk
-067cb49845652549703dbfc3bd430bcd  train/utt2yage
-de85481070df08a5b385aab1a979554a  train/wav.scp
+   14195 train/spk2gender
+   14195 train/spk2yage
+   53798 train/utt2spk
+   53798 train/utt2yage
+   53798 train/wav.scp
+  189784 total
+7dd98136c912029402815eb66b64456d  train/spk2gender
+b745b4165e5662cca69f4631f90ff086  train/spk2yage
+eef3a2f1fb962fb8b8275199bc99520e  train/utt2spk
+3fdff70ae9c6efbf64167084cf85473d  train/utt2yage
+205b8316cafb4ac49bb858a02e399d4c  train/wav.scp
 
    318 eval/spk2gender
    318 eval/spk2yage
-  2273 eval/utt2spk
-  2273 eval/utt2yage
-  2273 eval/wav.scp
-  7455 total
-ae7a14a64e75a4c96cc21dceb10deb17  eval/spk2gender
-66d54268fd4f0b884a706d079c077a96  eval/spk2yage
-0ed49cd8a4c9a17797dd22ad8a57bab6  eval/utt2spk
-ba1bbba6d6f1aa47c319f7874ea62519  eval/utt2yage
-410e9f2ba3afe7f7dfb0e3b137aca58a  eval/wav.scp
+  2726 eval/utt2spk
+  2726 eval/utt2yage
+  2726 eval/wav.scp
+  8814 total
+3a041d779503c2e4ac2e2c667d834636  eval/spk2gender
+aed7cfffc862e31a10a575ece5e06be2  eval/spk2yage
+e7b2eed734cd0ce168b864d3c422d698  eval/utt2spk
+255e7cbb67af0bc9801a96c50ae6ede0  eval/utt2yage
+ca6a61807ff76455b15702c11f7e7cb2  eval/wav.scp
 
    313 dev/spk2gender
    313 dev/spk2yage
-  2813 dev/utt2spk
-  2813 dev/utt2yage
-  2813 dev/wav.scp
-  9065 total
-262a7c38209361613281caad9efbae30  dev/spk2gender
-56580ce8d2efaf5ca865377cb3eb1e83  dev/spk2yage
-969f91c82ad8a075680af6231f487dd6  dev/utt2spk
-86aff46edfeeb9d6b41b92115abeac1f  dev/utt2yage
-db8182b9f10090f9f7c44ac54f9eeadd  dev/wav.scp
+  2584 dev/utt2spk
+  2584 dev/utt2yage
+  2584 dev/wav.scp
+  8378 total
+59310968c27c34f5cb3de97ed3a7bb6b  dev/spk2gender
+c80d6ccef0746c1247c341621fb95b02  dev/spk2yage
+352c4487d5cd0d753e2dd9fa17c6223b  dev/utt2spk
+1f9e06b73f27aec53a57892ccda64c93  dev/utt2yage
+ee04be5cd9d4cb6144027e1affc6b8e3  dev/wav.scp
 
 done!
 %
